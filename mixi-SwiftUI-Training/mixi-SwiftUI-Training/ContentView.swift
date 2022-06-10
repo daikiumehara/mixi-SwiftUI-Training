@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
+            Image("GitHubMark")
+                .resizable()
+                .frame(width: 44.0, height: 44.0)
+
             Text("Hello, world!")
                 .font(.largeTitle)
                 .fontWeight(.black)
