@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		702345052853680100733557 /* mixi_SwiftUI_TrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345042853680100733557 /* mixi_SwiftUI_TrainingApp.swift */; };
+		702345072853680100733557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345062853680100733557 /* ContentView.swift */; };
+		702345092853680900733557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702345082853680900733557 /* Assets.xcassets */; };
+		7023450C2853680900733557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7023450B2853680900733557 /* Preview Assets.xcassets */; };
+		702345162853680900733557 /* mixi_SwiftUI_TrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345152853680900733557 /* mixi_SwiftUI_TrainingTests.swift */; };
+		702345202853680900733557 /* mixi_SwiftUI_TrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023451F2853680900733557 /* mixi_SwiftUI_TrainingUITests.swift */; };
+		702345222853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345212853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		702345122853680900733557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702344F92853680100733557 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 702345002853680100733557;
+			remoteInfo = "mixi-SwiftUI-Training";
+		};
+		7023451C2853680900733557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 702344F92853680100733557 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 702345002853680100733557;
+			remoteInfo = "mixi-SwiftUI-Training";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		702345012853680100733557 /* mixi-SwiftUI-Training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mixi-SwiftUI-Training.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		702345042853680100733557 /* mixi_SwiftUI_TrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixi_SwiftUI_TrainingApp.swift; sourceTree = "<group>"; };
+		702345062853680100733557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		702345082853680900733557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7023450B2853680900733557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		702345112853680900733557 /* mixi-SwiftUI-TrainingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mixi-SwiftUI-TrainingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		702345152853680900733557 /* mixi_SwiftUI_TrainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixi_SwiftUI_TrainingTests.swift; sourceTree = "<group>"; };
+		7023451B2853680900733557 /* mixi-SwiftUI-TrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mixi-SwiftUI-TrainingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7023451F2853680900733557 /* mixi_SwiftUI_TrainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixi_SwiftUI_TrainingUITests.swift; sourceTree = "<group>"; };
+		702345212853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixi_SwiftUI_TrainingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		702344FE2853680100733557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7023450E2853680900733557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		702345182853680900733557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		702344F82853680100733557 = {
+			isa = PBXGroup;
+			children = (
+				702345032853680100733557 /* mixi-SwiftUI-Training */,
+				702345142853680900733557 /* mixi-SwiftUI-TrainingTests */,
+				7023451E2853680900733557 /* mixi-SwiftUI-TrainingUITests */,
+				702345022853680100733557 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		702345022853680100733557 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				702345012853680100733557 /* mixi-SwiftUI-Training.app */,
+				702345112853680900733557 /* mixi-SwiftUI-TrainingTests.xctest */,
+				7023451B2853680900733557 /* mixi-SwiftUI-TrainingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		702345032853680100733557 /* mixi-SwiftUI-Training */ = {
+			isa = PBXGroup;
+			children = (
+				702345042853680100733557 /* mixi_SwiftUI_TrainingApp.swift */,
+				702345062853680100733557 /* ContentView.swift */,
+				702345082853680900733557 /* Assets.xcassets */,
+				7023450A2853680900733557 /* Preview Content */,
+			);
+			path = "mixi-SwiftUI-Training";
+			sourceTree = "<group>";
+		};
+		7023450A2853680900733557 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7023450B2853680900733557 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		702345142853680900733557 /* mixi-SwiftUI-TrainingTests */ = {
+			isa = PBXGroup;
+			children = (
+				702345152853680900733557 /* mixi_SwiftUI_TrainingTests.swift */,
+			);
+			path = "mixi-SwiftUI-TrainingTests";
+			sourceTree = "<group>";
+		};
+		7023451E2853680900733557 /* mixi-SwiftUI-TrainingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7023451F2853680900733557 /* mixi_SwiftUI_TrainingUITests.swift */,
+				702345212853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift */,
+			);
+			path = "mixi-SwiftUI-TrainingUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		702345002853680100733557 /* mixi-SwiftUI-Training */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 702345252853680900733557 /* Build configuration list for PBXNativeTarget "mixi-SwiftUI-Training" */;
+			buildPhases = (
+				702344FD2853680100733557 /* Sources */,
+				702344FE2853680100733557 /* Frameworks */,
+				702344FF2853680100733557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mixi-SwiftUI-Training";
+			productName = "mixi-SwiftUI-Training";
+			productReference = 702345012853680100733557 /* mixi-SwiftUI-Training.app */;
+			productType = "com.apple.product-type.application";
+		};
+		702345102853680900733557 /* mixi-SwiftUI-TrainingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 702345282853680900733557 /* Build configuration list for PBXNativeTarget "mixi-SwiftUI-TrainingTests" */;
+			buildPhases = (
+				7023450D2853680900733557 /* Sources */,
+				7023450E2853680900733557 /* Frameworks */,
+				7023450F2853680900733557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				702345132853680900733557 /* PBXTargetDependency */,
+			);
+			name = "mixi-SwiftUI-TrainingTests";
+			productName = "mixi-SwiftUI-TrainingTests";
+			productReference = 702345112853680900733557 /* mixi-SwiftUI-TrainingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7023451A2853680900733557 /* mixi-SwiftUI-TrainingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7023452B2853680900733557 /* Build configuration list for PBXNativeTarget "mixi-SwiftUI-TrainingUITests" */;
+			buildPhases = (
+				702345172853680900733557 /* Sources */,
+				702345182853680900733557 /* Frameworks */,
+				702345192853680900733557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7023451D2853680900733557 /* PBXTargetDependency */,
+			);
+			name = "mixi-SwiftUI-TrainingUITests";
+			productName = "mixi-SwiftUI-TrainingUITests";
+			productReference = 7023451B2853680900733557 /* mixi-SwiftUI-TrainingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		702344F92853680100733557 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					702345002853680100733557 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					702345102853680900733557 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 702345002853680100733557;
+					};
+					7023451A2853680900733557 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 702345002853680100733557;
+					};
+				};
+			};
+			buildConfigurationList = 702344FC2853680100733557 /* Build configuration list for PBXProject "mixi-SwiftUI-Training" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 702344F82853680100733557;
+			productRefGroup = 702345022853680100733557 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				702345002853680100733557 /* mixi-SwiftUI-Training */,
+				702345102853680900733557 /* mixi-SwiftUI-TrainingTests */,
+				7023451A2853680900733557 /* mixi-SwiftUI-TrainingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		702344FF2853680100733557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7023450C2853680900733557 /* Preview Assets.xcassets in Resources */,
+				702345092853680900733557 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7023450F2853680900733557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		702345192853680900733557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		702344FD2853680100733557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				702345072853680100733557 /* ContentView.swift in Sources */,
+				702345052853680100733557 /* mixi_SwiftUI_TrainingApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7023450D2853680900733557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				702345162853680900733557 /* mixi_SwiftUI_TrainingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		702345172853680900733557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				702345202853680900733557 /* mixi_SwiftUI_TrainingUITests.swift in Sources */,
+				702345222853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		702345132853680900733557 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 702345002853680100733557 /* mixi-SwiftUI-Training */;
+			targetProxy = 702345122853680900733557 /* PBXContainerItemProxy */;
+		};
+		7023451D2853680900733557 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 702345002853680100733557 /* mixi-SwiftUI-Training */;
+			targetProxy = 7023451C2853680900733557 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		702345232853680900733557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		702345242853680900733557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		702345262853680900733557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"mixi-SwiftUI-Training/Preview Content\"";
+				DEVELOPMENT_TEAM = M4DFJLV2VG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.daikiumehara3.mixi-SwiftUI-Training";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		702345272853680900733557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"mixi-SwiftUI-Training/Preview Content\"";
+				DEVELOPMENT_TEAM = M4DFJLV2VG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.daikiumehara3.mixi-SwiftUI-Training";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		702345292853680900733557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4DFJLV2VG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.daikiumehara3.mixi-SwiftUI-TrainingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mixi-SwiftUI-Training.app/mixi-SwiftUI-Training";
+			};
+			name = Debug;
+		};
+		7023452A2853680900733557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4DFJLV2VG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.daikiumehara3.mixi-SwiftUI-TrainingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mixi-SwiftUI-Training.app/mixi-SwiftUI-Training";
+			};
+			name = Release;
+		};
+		7023452C2853680900733557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4DFJLV2VG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.daikiumehara3.mixi-SwiftUI-TrainingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "mixi-SwiftUI-Training";
+			};
+			name = Debug;
+		};
+		7023452D2853680900733557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4DFJLV2VG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.daikiumehara3.mixi-SwiftUI-TrainingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "mixi-SwiftUI-Training";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		702344FC2853680100733557 /* Build configuration list for PBXProject "mixi-SwiftUI-Training" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				702345232853680900733557 /* Debug */,
+				702345242853680900733557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		702345252853680900733557 /* Build configuration list for PBXNativeTarget "mixi-SwiftUI-Training" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				702345262853680900733557 /* Debug */,
+				702345272853680900733557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		702345282853680900733557 /* Build configuration list for PBXNativeTarget "mixi-SwiftUI-TrainingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				702345292853680900733557 /* Debug */,
+				7023452A2853680900733557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7023452B2853680900733557 /* Build configuration list for PBXNativeTarget "mixi-SwiftUI-TrainingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7023452C2853680900733557 /* Debug */,
+				7023452D2853680900733557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 702344F92853680100733557 /* Project object */;
+}
