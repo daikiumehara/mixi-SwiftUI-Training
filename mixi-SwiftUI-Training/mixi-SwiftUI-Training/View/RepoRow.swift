@@ -1,13 +1,15 @@
 //
-//  ContentView.swift
+//  RepoRow.swift
 //  mixi-SwiftUI-Training
 //
-//  Created by 梅原 奈輝 on 2022/06/10.
+//  Created by 梅原 奈輝 on 2022/06/11.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct RepoRow: View {
+    var repo: Repo
+    
     var body: some View {
         HStack {
             Image("GitHubMark")
@@ -15,18 +17,19 @@ struct ContentView: View {
                 .frame(width: 44.0, height: 44.0)
             
             VStack(alignment: .leading) {
-                Text("Owner Name")
+                Text(repo.owner.name)
                     .font(.caption)
                 
-                Text("Repository Name")
+                Text(repo.name)
                     .fontWeight(.semibold)
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RepoRow_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RepoRow(repo: Repo(id: 1, name: "Repo Name", owner: User(name: "Uesr Name")))
+            .previewLayout(.fixed(width: 300, height: 50))
     }
 }
