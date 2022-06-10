@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @State private var mockRepos: [Repo] = []
-    
-    private func loadRepos() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            mockRepos = [
-                .mock1, .mock2, .mock3, .mock4, .mock5
-            ]
-        }
-    }
+    private let mockRepos = [
+        Repo(id: 1, name: "Test Repo1", owner: User(name: "Test User1"), description: "This is a good code sample", stargazersCount: 10),
+        Repo(id: 2, name: "Test Repo2", owner: User(name: "Test User2"), description: "This is a good code sample", stargazersCount: 10),
+        Repo(id: 3, name: "Test Repo3", owner: User(name: "Test User3"), description: "This is a good code sample", stargazersCount: 10),
+        Repo(id: 4, name: "Test Repo4", owner: User(name: "Test User4"), description: "This is a good code sample", stargazersCount: 10),
+        Repo(id: 5, name: "Test Repo5", owner: User(name: "Test User5"), description: "This is a good code sample", stargazersCount: 10)
+    ]
     
     var body: some View {
         NavigationView {
@@ -32,9 +30,6 @@ struct RepoListView: View {
                 }
                 .navigationTitle("Repositories")
             }
-        }
-        .onAppear {
-            loadRepos()
         }
     }
 }
