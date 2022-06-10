@@ -8,43 +8,23 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @StateObject private var viewModel = RepoListViewModel(repoRepository: RepoRepositoryImpl(githubClient: GitHubClientImpl()))
+    private let mockRepos = [
+        Repo(id: 1, name: "Test Repo1", owner: User(name: "Test User1"), description: "This is a good code sample", stargazersCount: 10),
+        Repo(id: 2, name: "Test Repo2", owner: User(name: "Test User2"), description: "This is a good code sample", stargazersCount: 10),
+        Repo(id: 3, name: "Test Repo3", owner: User(name: "Test User3"), description: "This is a good code sample", stargazersCount: 10),
+        Repo(id: 4, name: "Test Repo4", owner: User(name: "Test User4"), description: "This is a good code sample", stargazersCount: 10),
+        Repo(id: 5, name: "Test Repo5", owner: User(name: "Test User5"), description: "This is a good code sample", stargazersCount: 10)
+    ]
     
     var body: some View {
-        NavigationView {
-            Group {
-                switch viewModel.state {
-                case .idle, .loading:
-                    ProgressView("loading...")
-                case .loaded(let repos):
-                    if repos.isEmpty {
-                        Text("No repositories")
-                            .bold()
-                    } else {
-                        List(repos) { repo in
-                            NavigationLink {
-                                RepoDetailView(repo: repo)
-                            } label: {
-                                RepoRow(repo: repo)
-                            }
-                        }
-                    }
-                case .failed(_):
-                    ErrorView {
-                        viewModel.onRetryButtonTapped()
-                    }
-                }
-            }
-            .navigationTitle("Repositories")
-        }
-        .onAppear {
-            viewModel.onAppear()
+        List(mockRepos) { repo in
+            RepoRow(repo: repo)
         }
     }
 }
-        
-        struct RepoListView_Previews: PreviewProvider {
-            static var previews: some View {
-                RepoListView()
-            }
-        }
+
+struct RepoListView_Previews: PreviewProvider {
+    static var previews: some View {
+        RepoListView()
+    }
+}
