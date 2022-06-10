@@ -34,6 +34,7 @@ struct RepoDetailView: View {
             }
             .padding(.top, 8)
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
