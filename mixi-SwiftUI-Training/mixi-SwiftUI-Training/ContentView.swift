@@ -9,22 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) {
+        HStack {
             Image("GitHubMark")
                 .resizable()
                 .frame(width: 44.0, height: 44.0)
-
-            Text("Hello, world!")
-                .font(.largeTitle)
-                .fontWeight(.black)
-                .foregroundColor(.red)
-                .padding()
             
-            Text("Good evening, world!")
-                .font(.title3)
-                .fontWeight(.bold)
-                .foregroundColor(.blue)
-                .padding()
+            VStack(alignment: .leading) {
+                Text("Owner Name")
+                    .font(.caption)
+                
+                Text("Repository Name")
+                    .fontWeight(.semibold)
+            }
         }
     }
 }
