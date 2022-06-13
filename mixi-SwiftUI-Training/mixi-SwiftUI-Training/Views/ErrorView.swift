@@ -25,6 +25,7 @@ struct ErrorView: View {
                 Text("Retry")
                     .bold()
             }
+            .padding()
         }
     }
 }
