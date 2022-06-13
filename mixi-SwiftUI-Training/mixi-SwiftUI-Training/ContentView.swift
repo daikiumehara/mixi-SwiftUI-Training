@@ -12,6 +12,7 @@ struct ContentView: View {
         HStack {
             Image("GitHubMark")
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(width: 44.0, height: 44.0)
             
             VStack(alignment: .leading) {
