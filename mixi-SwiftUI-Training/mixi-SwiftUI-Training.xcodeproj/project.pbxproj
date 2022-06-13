@@ -23,6 +23,7 @@
 		70928ED92856D495001630ED /* ReposStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928ED82856D495001630ED /* ReposStore.swift */; };
 		70928EDD285705B3001630ED /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928EDC285705B3001630ED /* GitHubClient.swift */; };
 		70928EDF2857080A001630ED /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928EDE2857080A001630ED /* APIError.swift */; };
+		70E6CFA9285720A300DCC45D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFA8285720A300DCC45D /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		70928ED82856D495001630ED /* ReposStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposStore.swift; sourceTree = "<group>"; };
 		70928EDC285705B3001630ED /* GitHubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
 		70928EDE2857080A001630ED /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		70E6CFA8285720A300DCC45D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				702345062853680100733557 /* RepoListView.swift */,
 				702345322853A45300733557 /* RepoRow.swift */,
 				70928ED22853B7F9001630ED /* RepoDetailView.swift */,
+				70E6CFA8285720A300DCC45D /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				70928ED32853B7F9001630ED /* RepoDetailView.swift in Sources */,
 				70928EDD285705B3001630ED /* GitHubClient.swift in Sources */,
 				702345072853680100733557 /* RepoListView.swift in Sources */,
+				70E6CFA9285720A300DCC45D /* ErrorView.swift in Sources */,
 				70928ED92856D495001630ED /* ReposStore.swift in Sources */,
 				70928ED72853B94F001630ED /* User+mock.swift in Sources */,
 				702345052853680100733557 /* mixi_SwiftUI_TrainingApp.swift in Sources */,
