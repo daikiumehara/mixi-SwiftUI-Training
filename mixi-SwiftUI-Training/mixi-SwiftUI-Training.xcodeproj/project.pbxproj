@@ -14,6 +14,9 @@
 		702345162853680900733557 /* mixi_SwiftUI_TrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345152853680900733557 /* mixi_SwiftUI_TrainingTests.swift */; };
 		702345202853680900733557 /* mixi_SwiftUI_TrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023451F2853680900733557 /* mixi_SwiftUI_TrainingUITests.swift */; };
 		702345222853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345212853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift */; };
+		7023452F2853A23700733557 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023452E2853A23700733557 /* Repo.swift */; };
+		702345312853A24F00733557 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345302853A24F00733557 /* User.swift */; };
+		702345332853A45300733557 /* RepoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345322853A45300733557 /* RepoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		7023451B2853680900733557 /* mixi-SwiftUI-TrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mixi-SwiftUI-TrainingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7023451F2853680900733557 /* mixi_SwiftUI_TrainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixi_SwiftUI_TrainingUITests.swift; sourceTree = "<group>"; };
 		702345212853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixi_SwiftUI_TrainingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7023452E2853A23700733557 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		702345302853A24F00733557 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		702345322853A45300733557 /* RepoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,9 @@
 		702345032853680100733557 /* mixi-SwiftUI-Training */ = {
 			isa = PBXGroup;
 			children = (
+				702345352853A59900733557 /* Model */,
+				702345342853A59500733557 /* View */,
 				702345042853680100733557 /* mixi_SwiftUI_TrainingApp.swift */,
-				702345062853680100733557 /* ContentView.swift */,
 				702345082853680900733557 /* Assets.xcassets */,
 				7023450A2853680900733557 /* Preview Content */,
 			);
@@ -125,6 +132,24 @@
 				702345212853680900733557 /* mixi_SwiftUI_TrainingUITestsLaunchTests.swift */,
 			);
 			path = "mixi-SwiftUI-TrainingUITests";
+			sourceTree = "<group>";
+		};
+		702345342853A59500733557 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				702345062853680100733557 /* ContentView.swift */,
+				702345322853A45300733557 /* RepoRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		702345352853A59900733557 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7023452E2853A23700733557 /* Repo.swift */,
+				702345302853A24F00733557 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702345332853A45300733557 /* RepoRow.swift in Sources */,
+				702345312853A24F00733557 /* User.swift in Sources */,
+				7023452F2853A23700733557 /* Repo.swift in Sources */,
 				702345072853680100733557 /* ContentView.swift in Sources */,
 				702345052853680100733557 /* mixi_SwiftUI_TrainingApp.swift in Sources */,
 			);
