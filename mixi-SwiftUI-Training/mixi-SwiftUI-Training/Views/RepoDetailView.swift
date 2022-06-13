@@ -11,28 +11,30 @@ struct RepoDetailView: View {
     var repo: Repo
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Image("GitHubMark")
-                    .resizable()
-                    .frame(width: 16, height: 16)
+        ScrollView {
+            VStack(alignment: .leading) {
+                HStack {
+                    Image("GitHubMark")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                    
+                    Text(repo.owner.name)
+                        .font(.caption)
+                }
                 
-                Text(repo.owner.name)
-                    .font(.caption)
-            }
-            
-            Text(repo.name)
-                .bold()
-            
-            Text(repo.description)
-                .padding(.top, 4)
-            
-            HStack {
-                Image(systemName: "star")
+                Text(repo.name)
+                    .bold()
                 
-                Text("\(repo.stargazersCount) stars")
+                Text(repo.description)
+                    .padding(.top, 4)
+                
+                HStack {
+                    Image(systemName: "star")
+                    
+                    Text("\(repo.stargazersCount) stars")
+                }
+                .padding(.top, 8)
             }
-            .padding(.top, 8)
         }
         .navigationBarTitleDisplayMode(.inline)
     }
