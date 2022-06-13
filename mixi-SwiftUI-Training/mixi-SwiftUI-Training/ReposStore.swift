@@ -12,7 +12,12 @@ class ReposStore: ObservableObject {
     @Published private(set) var repos = [Repo]()
     
     func loadRepos() async {
-        try? await Task.sleep(nanoseconds: 1_000_000_000)
-        self.repos = [.mock1, .mock2, .mock3, .mock4, .mock5]
+        let result = await GitHubClient.fetchData()
+        switch result {
+        case .success(let repos):
+            self.repos = repos
+        case .failure(let error):
+            print(error)
+        }
     }
 }

@@ -12,7 +12,7 @@ struct User: Codable {
     var imageURL: URL
     
     private enum CodingKeys: String, CodingKey {
-        case name
-        case imageURL = "icon"
+        case name = "login"
+        case imageURL = "avatarUrl"
     }
 }
