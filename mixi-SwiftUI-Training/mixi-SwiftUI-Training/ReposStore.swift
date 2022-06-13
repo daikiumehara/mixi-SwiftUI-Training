@@ -21,6 +21,5 @@ class ReposStore: ObservableObject {
         case .failure(let error):
             state = .failed(error)
         }
-
     }
 }
