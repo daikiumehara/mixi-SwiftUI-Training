@@ -12,7 +12,8 @@ class ReposStore: ObservableObject {
     
     func loadRepos() async {
         try! await Task.sleep(nanoseconds: 1_000_000_000)
-        
-        repos = [.mock1, .mock2, .mock3, .mock4, .mock5]
+        DispatchQueue.main.async {
+            self.repos = [.mock1, .mock2, .mock3, .mock4, .mock5]
+        }
     }
 }
