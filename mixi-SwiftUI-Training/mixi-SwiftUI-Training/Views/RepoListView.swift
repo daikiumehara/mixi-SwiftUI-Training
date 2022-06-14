@@ -12,14 +12,32 @@ struct RepoListView: View {
     
     var body: some View {
         NavigationView {
-            if reposStore.repos.isEmpty {
+            if reposStore.isLoading {
                 ProgressView("loading...")
             } else {
-                List(reposStore.repos) { repo in
-                    NavigationLink {
-                        RepoDetailView(repo: repo)
-                    } label: {
-                        RepoRow(repo: repo)
+                VStack {
+                    if reposStore.error == nil {
+                        if reposStore.repos.isEmpty {
+                            Text("No repositories")
+                                .bold()
+                                .task {
+                                    await reposStore.loadRepos()
+                                }
+                        } else {
+                            List(reposStore.repos) { repo in
+                                NavigationLink {
+                                    RepoDetailView(repo: repo)
+                                } label: {
+                                    RepoRow(repo: repo)
+                                }
+                            }
+                        }
+                    } else {
+                        ErrorView {
+                            Task {
+                                await self.reposStore.loadRepos()
+                            }
+                        }
                     }
                 }
                 .navigationTitle("Repositories")
@@ -30,9 +48,9 @@ struct RepoListView: View {
         }
     }
 }
-
-struct RepoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        RepoListView()
-    }
-}
+        
+        struct RepoListView_Previews: PreviewProvider {
+            static var previews: some View {
+                RepoListView()
+            }
+        }
