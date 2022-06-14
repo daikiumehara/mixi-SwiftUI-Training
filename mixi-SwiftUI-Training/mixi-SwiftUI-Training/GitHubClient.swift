@@ -24,7 +24,7 @@ struct GitHubClient {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         guard let repos = try? decoder.decode([Repo].self, from: data) else {
-            return .failure(APIError.missDecode)
+            return .failure(APIError.decodingError)
         }
         return .success(repos)
     }
