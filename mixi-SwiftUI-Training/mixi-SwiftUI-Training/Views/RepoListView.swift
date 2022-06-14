@@ -20,9 +20,6 @@ struct RepoListView: View {
                         if reposStore.repos.isEmpty {
                             Text("No repositories")
                                 .bold()
-                                .task {
-                                    await reposStore.loadRepos()
-                                }
                         } else {
                             List(reposStore.repos) { repo in
                                 NavigationLink {
@@ -45,6 +42,9 @@ struct RepoListView: View {
             .onAppear {
                 loadRepos()
             }
+        }
+        .task {
+            await reposStore.loadRepos()
         }
     }
 }
