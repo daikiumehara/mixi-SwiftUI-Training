@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RepoDetailView: View {
-    var repo: Repo
+    let repo: Repo
     
     var body: some View {
         ScrollView {
