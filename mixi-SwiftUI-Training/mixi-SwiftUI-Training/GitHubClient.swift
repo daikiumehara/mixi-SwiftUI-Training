@@ -14,18 +14,20 @@ struct GitHubClient {
         request.httpMethod = "GET"
         request.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
         
-        guard let (data, response) = try? await URLSession.shared.data(for: request) else {
-            return .failure(APIError.unexpected)
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            guard let response = response as? HTTPURLResponse,
+                  response.statusCode == 200 else {
+                return .failure(APIError.badResponse)
+            }
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            guard let repos = try? decoder.decode([Repo].self, from: data) else {
+                return .failure(APIError.decodingError)
+            }
+            return .success(repos)
+        } catch {
+            return .failure(APIError.unexpected(error))
         }
-        guard let response = response as? HTTPURLResponse,
-              response.statusCode == 200 else {
-            return .failure(APIError.badResponse)
-        }
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        guard let repos = try? decoder.decode([Repo].self, from: data) else {
-            return .failure(APIError.decodingError)
-        }
-        return .success(repos)
     }
 }

@@ -10,5 +10,5 @@ import Foundation
 enum APIError: Error {
     case decodingError
     case badResponse
-    case unexpected
+    case unexpected(_ error: Error)
 }
