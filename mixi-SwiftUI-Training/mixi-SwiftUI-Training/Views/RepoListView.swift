@@ -19,13 +19,13 @@ struct RepoListView: View {
     }
     
     var body: some View {
-        if mockRepos.isEmpty {
-            ProgressView("loading...")
-                .onAppear {
-                    loadRepos()
-                }
-        } else {
-            NavigationView {
+        NavigationView {
+            if mockRepos.isEmpty {
+                ProgressView("loading...")
+                    .onAppear {
+                        loadRepos()
+                    }
+            } else {
                 List(mockRepos) { repo in
                     NavigationLink {
                         RepoDetailView(repo: repo)
