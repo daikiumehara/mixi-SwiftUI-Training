@@ -12,42 +12,41 @@ struct RepoListView: View {
     
     var body: some View {
         NavigationView {
-            if reposStore.isLoading {
-                ProgressView("loading...")
-            } else {
-                VStack {
-                    if reposStore.error == nil {
-                        if reposStore.repos.isEmpty {
-                            Text("No repositories")
-                                .bold()
-                        } else {
-                            List(reposStore.repos) { repo in
-                                NavigationLink {
-                                    RepoDetailView(repo: repo)
-                                } label: {
-                                    RepoRow(repo: repo)
-                                }
-                            }
-                        }
+            Group {
+                switch reposStore.state {
+                case .idle, .loading:
+                    ProgressView("loading...")
+                case .loaded(let repos):
+                    if repos.isEmpty {
+                        Text("No repositories")
+                            .bold()
                     } else {
-                        ErrorView {
-                            Task {
-                                await self.reposStore.loadRepos()
+                        List(repos) { repo in
+                            NavigationLink {
+                                RepoDetailView(repo: repo)
+                            } label: {
+                                RepoRow(repo: repo)
                             }
                         }
                     }
+                case .failed(_):
+                    ErrorView {
+                        Task {
+                            await self.reposStore.loadRepos()
+                        }
+                    }
                 }
-                .navigationTitle("Repositories")
             }
+            .navigationTitle("Repositories")
         }
         .task {
             await reposStore.loadRepos()
         }
     }
 }
-        
-        struct RepoListView_Previews: PreviewProvider {
-            static var previews: some View {
-                RepoListView()
-            }
-        }
+
+struct RepoListView_Previews: PreviewProvider {
+    static var previews: some View {
+        RepoListView()
+    }
+}
