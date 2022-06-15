@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct RepoRepository {
+protocol RepoRepository {
+    func fetchRepos() async -> Result<[Repo], APIError>
+}
+
+struct RepoRepositoryImpl: RepoRepository {
     private let githubClient: GitHubClient
     
     init(githubClient: GitHubClient) {

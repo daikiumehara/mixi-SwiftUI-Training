@@ -25,7 +25,7 @@
 		70E6CFA9285720A300DCC45D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFA8285720A300DCC45D /* ErrorView.swift */; };
 		70E6CFB2285997F500DCC45D /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFB1285997F500DCC45D /* Stateful.swift */; };
 		70E6CFAE2859785B00DCC45D /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFAD2859785B00DCC45D /* RepoListViewModel.swift */; };
-		70E6CFB02859786600DCC45D /* RepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFAF2859786600DCC45D /* RepoRepository.swift */; };
+		70E6CFB02859786600DCC45D /* RepoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFAF2859786600DCC45D /* RepoRepositoryImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		70E6CFA8285720A300DCC45D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		70E6CFB1285997F500DCC45D /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 		70E6CFAD2859785B00DCC45D /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
-		70E6CFAF2859786600DCC45D /* RepoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRepository.swift; sourceTree = "<group>"; };
+		70E6CFAF2859786600DCC45D /* RepoRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +198,7 @@
 		70E6CFAC285977A400DCC45D /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				70E6CFAF2859786600DCC45D /* RepoRepository.swift */,
+				70E6CFAF2859786600DCC45D /* RepoRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 				702345072853680100733557 /* RepoListView.swift in Sources */,
 				70E6CFA9285720A300DCC45D /* ErrorView.swift in Sources */,
 				70928ED72853B94F001630ED /* User+mock.swift in Sources */,
-				70E6CFB02859786600DCC45D /* RepoRepository.swift in Sources */,
+				70E6CFB02859786600DCC45D /* RepoRepositoryImpl.swift in Sources */,
 				702345052853680100733557 /* mixi_SwiftUI_TrainingApp.swift in Sources */,
 				70928EDF2857080A001630ED /* APIError.swift in Sources */,
 			);
