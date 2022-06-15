@@ -8,14 +8,20 @@
 import XCTest
 @testable import mixi_SwiftUI_Training
 
-class mixi_SwiftUI_TrainingTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+class RepoListViewModelTests: XCTestCase {
+    @MainActor func test_onAppear_正常系() {
+        let viewModel = RepoListViewModel(
+            repoRepository: MockRepoRepository(repos: [.mock1, .mock2])
+        )
+        
+        viewModel.onAppear()
+        
+        switch viewModel.state {
+        case let .loaded(repos):
+            XCTAssertEqual(repos, [Repo.mock1, Repo.mock2])
+        default:
+            XCTFail()
+        }
     }
 
     func testExample() throws {
