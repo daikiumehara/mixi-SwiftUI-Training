@@ -11,7 +11,13 @@ import SwiftUI
 struct mixi_SwiftUI_TrainingApp: App {
     var body: some Scene {
         WindowGroup {
-            RepoListView()
+            RepoListView(
+                repoListViewModel: RepoListViewModel(
+                    repoRepository: RepoRepositoryImpl(
+                        githubClient: GitHubClientImpl()
+                    )
+                )
+            )
         }
     }
 }
