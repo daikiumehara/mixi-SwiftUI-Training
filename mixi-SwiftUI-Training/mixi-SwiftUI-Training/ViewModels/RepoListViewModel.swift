@@ -7,6 +7,28 @@
 
 import Foundation
 
-final class RepoListViewModel {
+@MainActor
+final class RepoListViewModel: ObservableObject {
+    @Published private(set) var state: Stateful<[Repo]> = .idle
     
+    func onAppear() {
+        loadRepos()
+    }
+    
+    func onRetryButtonTapped() {
+        loadRepos()
+    }
+    
+    private func loadRepos() {
+        Task {
+            state = .loading
+            let result = await GitHubClient.fetchData()
+            switch result {
+            case .success(let repos):
+                state = .loaded(repos)
+            case .failure(let error):
+                state = .failed(error)
+            }
+        }
+    }
 }
