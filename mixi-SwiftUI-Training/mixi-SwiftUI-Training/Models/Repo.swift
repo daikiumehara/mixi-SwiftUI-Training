@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct Repo: Identifiable, Codable {
+struct Repo: Identifiable, Codable, Equatable {
     var id: Int
     var name: String
     var owner: User
     var description: String?
     var stargazersCount: Int
+    
+    static func == (lhs: Repo, rhs: Repo) -> Bool {
+        lhs.id == rhs.id
+    }
 }
