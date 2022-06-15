@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol GitHubClientProtocol {
+protocol GitHubClient {
     func fetchData() async -> Result<[Repo], APIError>
 }
 
-struct GitHubClient: GitHubClientProtocol {
+struct GitHubClientImpl: GitHubClient {
     func fetchData() async -> Result<[Repo], APIError> {
         let url = URL(string: "https://api.github.com/orgs/mixigroup/repos")!
         var request = URLRequest(url: url)
