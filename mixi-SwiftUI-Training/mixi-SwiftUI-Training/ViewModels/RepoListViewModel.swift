@@ -16,7 +16,7 @@ final class RepoListViewModel: ObservableObject {
     init(repoRepository: RepoRepository) {
         self.repoRepository = repoRepository
     }
-    
+
     func onAppear() {
         loadRepos()
     }
