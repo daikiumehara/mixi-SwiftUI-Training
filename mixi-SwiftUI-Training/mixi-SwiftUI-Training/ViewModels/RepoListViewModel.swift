@@ -11,6 +11,12 @@ import Foundation
 final class RepoListViewModel: ObservableObject {
     @Published private(set) var state: Stateful<[Repo]> = .idle
     
+    private let repoRepository: RepoRepository
+    
+    init(repoRepository: RepoRepository) {
+        self.repoRepository = repoRepository
+    }
+    
     func onAppear() {
         loadRepos()
     }
@@ -22,7 +28,7 @@ final class RepoListViewModel: ObservableObject {
     private func loadRepos() {
         Task {
             state = .loading
-            let result = await GitHubClient.fetchData()
+            let result = await repoRepository.fetchRepos()
             switch result {
             case .success(let repos):
                 state = .loaded(repos)
