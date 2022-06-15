@@ -39,15 +39,32 @@ struct RepoListView: View {
                     }
                 }
             }
+            .navigationTitle("Repositories")
         }
         .onAppear {
             viewModel.onAppear()
         }
     }
 }
-        
-        struct RepoListView_Previews: PreviewProvider {
-            static var previews: some View {
-                RepoListView()
-            }
+
+struct RepoListView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            RepoListView(
+                repoListViewModel: RepoListViewModel(
+                    repoRepository: StubRepoRepository(state: .loaded([.mock1, .mock2, .mock3, .mock4, .mock5]))
+                )
+            )
+            RepoListView(
+                repoListViewModel: RepoListViewModel(
+                    repoRepository: StubRepoRepository(state: .loaded([]))
+                )
+            )
+            RepoListView(
+                repoListViewModel: RepoListViewModel(
+                    repoRepository: StubRepoRepository(state: .failed(.badResponse) )
+                )
+            )
         }
+    }
+}
