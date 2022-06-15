@@ -26,7 +26,7 @@
 		70E6CFAE2859785B00DCC45D /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFAD2859785B00DCC45D /* RepoListViewModel.swift */; };
 		70E6CFB02859786600DCC45D /* RepoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFAF2859786600DCC45D /* RepoRepositoryImpl.swift */; };
 		70E6CFB2285997F500DCC45D /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFB1285997F500DCC45D /* Stateful.swift */; };
-		70E6CFB42859C8A400DCC45D /* MockRepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFB32859C8A400DCC45D /* MockRepoRepository.swift */; };
+		70E6CFB42859C8A400DCC45D /* StubRepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFB32859C8A400DCC45D /* StubRepoRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 		70E6CFAD2859785B00DCC45D /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
 		70E6CFAF2859786600DCC45D /* RepoRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRepositoryImpl.swift; sourceTree = "<group>"; };
 		70E6CFB1285997F500DCC45D /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
-		70E6CFB32859C8A400DCC45D /* MockRepoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoRepository.swift; sourceTree = "<group>"; };
+		70E6CFB32859C8A400DCC45D /* StubRepoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubRepoRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				702345152853680900733557 /* RepoListViewModelTests.swift */,
-				70E6CFB32859C8A400DCC45D /* MockRepoRepository.swift */,
+				70E6CFB32859C8A400DCC45D /* StubRepoRepository.swift */,
 			);
 			path = "mixi-SwiftUI-TrainingTests";
 			sourceTree = "<group>";
@@ -358,7 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				702345162853680900733557 /* RepoListViewModelTests.swift in Sources */,
-				70E6CFB42859C8A400DCC45D /* MockRepoRepository.swift in Sources */,
+				70E6CFB42859C8A400DCC45D /* StubRepoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
