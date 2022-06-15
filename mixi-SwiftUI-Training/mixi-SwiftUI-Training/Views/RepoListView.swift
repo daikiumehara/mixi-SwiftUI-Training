@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @StateObject private var viewModel = RepoListViewModel(repoRepository: RepoRepositoryImpl(githubClient: GitHubClientImpl()))
+    @StateObject private var viewModel: RepoListViewModel
+    
+    init(repoListViewModel: RepoListViewModel) {
+        _viewModel = StateObject(wrappedValue: repoListViewModel)
+    }
     
     var body: some View {
         NavigationView {
