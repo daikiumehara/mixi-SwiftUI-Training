@@ -22,9 +22,6 @@ struct RepoListView: View {
         NavigationView {
             if mockRepos.isEmpty {
                 ProgressView("loading...")
-                    .onAppear {
-                        loadRepos()
-                    }
             } else {
                 List(mockRepos) { repo in
                     NavigationLink {
@@ -35,6 +32,9 @@ struct RepoListView: View {
                 }
                 .navigationTitle("Repositories")
             }
+        }
+        .onAppear {
+            loadRepos()
         }
     }
 }
