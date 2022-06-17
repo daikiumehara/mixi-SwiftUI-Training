@@ -33,7 +33,6 @@ struct RepoListView: View {
                     ErrorView {
                         viewModel.onRetryButtonTapped()
                     }
-                    
                 }
             }
             .navigationTitle("Repositories")
@@ -43,9 +42,9 @@ struct RepoListView: View {
         }
     }
 }
-
-struct RepoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        RepoListView()
-    }
-}
+        
+        struct RepoListView_Previews: PreviewProvider {
+            static var previews: some View {
+                RepoListView()
+            }
+        }
