@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @StateObject private var reposStore = ReposStore()
+    @StateObject private var viewModel = RepoListViewModel(repoRepository: RepoRepositoryImpl(githubClient: GitHubClientImpl()))
     
     var body: some View {
         NavigationView {
             Group {
-                switch reposStore.state {
+                switch viewModel.state {
                 case .idle, .loading:
                     ProgressView("loading...")
                 case .loaded(let repos):
@@ -31,16 +31,15 @@ struct RepoListView: View {
                     }
                 case .failed(_):
                     ErrorView {
-                        Task {
-                            await self.reposStore.loadRepos()
-                        }
+                        viewModel.onRetryButtonTapped()
                     }
+                    
                 }
             }
             .navigationTitle("Repositories")
         }
-        .task {
-            await reposStore.loadRepos()
+        .onAppear {
+            viewModel.onAppear()
         }
     }
 }
