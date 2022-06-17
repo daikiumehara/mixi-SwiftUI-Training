@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @StateObject private var viewModel = RepoListViewModel(repoRepository: RepoRepositoryImpl(githubClient: GitHubClientImpl()))
+    @StateObject private var viewModel: RepoListViewModel
+    
+    init(repoListViewModel: RepoListViewModel) {
+        _viewModel = StateObject(wrappedValue: repoListViewModel)
+    }
     
     var body: some View {
         NavigationView {
@@ -42,9 +46,25 @@ struct RepoListView: View {
         }
     }
 }
-        
-        struct RepoListView_Previews: PreviewProvider {
-            static var previews: some View {
-                RepoListView()
-            }
+
+struct RepoListView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            RepoListView(
+                repoListViewModel: RepoListViewModel(
+                    repoRepository: StubRepoRepository(state: .loaded([.mock1, .mock2, .mock3, .mock4, .mock5]))
+                )
+            )
+            RepoListView(
+                repoListViewModel: RepoListViewModel(
+                    repoRepository: StubRepoRepository(state: .loaded([]))
+                )
+            )
+            RepoListView(
+                repoListViewModel: RepoListViewModel(
+                    repoRepository: StubRepoRepository(state: .failed(.badResponse) )
+                )
+            )
         }
+    }
+}

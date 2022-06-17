@@ -26,7 +26,7 @@
 		70E6CFAE2859785B00DCC45D /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFAD2859785B00DCC45D /* RepoListViewModel.swift */; };
 		70E6CFB02859786600DCC45D /* RepoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFAF2859786600DCC45D /* RepoRepositoryImpl.swift */; };
 		70E6CFB2285997F500DCC45D /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFB1285997F500DCC45D /* Stateful.swift */; };
-		70E6CFB42859C8A400DCC45D /* StubRepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFB32859C8A400DCC45D /* StubRepoRepository.swift */; };
+		70E6CFB5285A5CE200DCC45D /* StubRepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6CFB32859C8A400DCC45D /* StubRepoRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +120,7 @@
 		702345032853680100733557 /* mixi-SwiftUI-Training */ = {
 			isa = PBXGroup;
 			children = (
+				70E6CFB6285A5CE500DCC45D /* Stub */,
 				70E6CFAC285977A400DCC45D /* Repositories */,
 				70E6CFAB2859779C00DCC45D /* ViewModels */,
 				70E6CFAA2858FAE400DCC45D /* Mock */,
@@ -147,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				702345152853680900733557 /* RepoListViewModelTests.swift */,
-				70E6CFB32859C8A400DCC45D /* StubRepoRepository.swift */,
 			);
 			path = "mixi-SwiftUI-TrainingTests";
 			sourceTree = "<group>";
@@ -204,6 +204,14 @@
 				70E6CFAF2859786600DCC45D /* RepoRepositoryImpl.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		70E6CFB6285A5CE500DCC45D /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				70E6CFB32859C8A400DCC45D /* StubRepoRepository.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E6CFB5285A5CE200DCC45D /* StubRepoRepository.swift in Sources */,
 				702345332853A45300733557 /* RepoRow.swift in Sources */,
 				70928ED52853B946001630ED /* Repo+mock.swift in Sources */,
 				702345312853A24F00733557 /* User.swift in Sources */,
@@ -358,7 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				702345162853680900733557 /* RepoListViewModelTests.swift in Sources */,
-				70E6CFB42859C8A400DCC45D /* StubRepoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
