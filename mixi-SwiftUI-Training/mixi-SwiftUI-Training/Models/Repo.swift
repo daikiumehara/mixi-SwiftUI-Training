@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Repo: Identifiable, Codable {
+struct Repo: Identifiable, Decodable {
     var id: Int
     var name: String
     var owner: User

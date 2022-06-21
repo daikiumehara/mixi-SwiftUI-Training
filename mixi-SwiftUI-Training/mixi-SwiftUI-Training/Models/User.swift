@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Decodable {
     var name: String
     var imageURL: URL
     
