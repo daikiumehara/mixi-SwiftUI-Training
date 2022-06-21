@@ -8,7 +8,7 @@
 import Foundation
 
 struct GitHubClient {
-    static func fetchData() async -> Result<[Repo], Error> {
+    static func fetchData() async -> Result<[Repo], APIError> {
         let url = URL(string: "https://api.github.com/orgs/mixigroup/repos")!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

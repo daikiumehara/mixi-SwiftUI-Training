@@ -12,18 +12,32 @@ struct RepoListView: View {
     
     var body: some View {
         NavigationView {
-            if reposStore.repos.isEmpty {
-                ProgressView("loading...")
-            } else {
-                List(reposStore.repos) { repo in
-                    NavigationLink {
-                        RepoDetailView(repo: repo)
-                    } label: {
-                        RepoRow(repo: repo)
+            Group {
+                switch reposStore.state {
+                case .idle, .loading:
+                    ProgressView("loading...")
+                case .loaded(let repos):
+                    if repos.isEmpty {
+                        Text("No repositories")
+                            .bold()
+                    } else {
+                        List(repos) { repo in
+                            NavigationLink {
+                                RepoDetailView(repo: repo)
+                            } label: {
+                                RepoRow(repo: repo)
+                            }
+                        }
+                    }
+                case .failed(_):
+                    ErrorView {
+                        Task {
+                            await self.reposStore.loadRepos()
+                        }
                     }
                 }
-                .navigationTitle("Repositories")
             }
+            .navigationTitle("Repositories")
         }
         .task {
             await reposStore.loadRepos()
