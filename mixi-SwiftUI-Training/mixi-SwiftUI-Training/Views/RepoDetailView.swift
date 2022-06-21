@@ -25,7 +25,7 @@ struct RepoDetailView: View {
                 Text(repo.name)
                     .bold()
                 
-                Text(repo.description)
+                Text(repo.description ?? "")
                     .padding(.top, 4)
                 
                 HStack {

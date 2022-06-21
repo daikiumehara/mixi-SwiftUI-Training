@@ -7,6 +7,12 @@
 
 import Foundation
 
-struct User {
-    var name: String
+struct User: Decodable {
+    let name: String
+    let avatarURL: URL
+    
+    private enum CodingKeys: String, CodingKey {
+        case name = "login"
+        case avatarURL = "avatarUrl"
+    }
 }

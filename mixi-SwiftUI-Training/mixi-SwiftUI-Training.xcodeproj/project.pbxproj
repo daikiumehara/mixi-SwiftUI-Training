@@ -21,6 +21,8 @@
 		70928ED52853B946001630ED /* Repo+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928ED42853B946001630ED /* Repo+mock.swift */; };
 		70928ED72853B94F001630ED /* User+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928ED62853B94F001630ED /* User+mock.swift */; };
 		70928ED92856D495001630ED /* ReposStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928ED82856D495001630ED /* ReposStore.swift */; };
+		70928EDD285705B3001630ED /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928EDC285705B3001630ED /* GitHubClient.swift */; };
+		70928EDF2857080A001630ED /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928EDE2857080A001630ED /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		70928ED42853B946001630ED /* Repo+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+mock.swift"; sourceTree = "<group>"; };
 		70928ED62853B94F001630ED /* User+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+mock.swift"; sourceTree = "<group>"; };
 		70928ED82856D495001630ED /* ReposStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposStore.swift; sourceTree = "<group>"; };
+		70928EDC285705B3001630ED /* GitHubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
+		70928EDE2857080A001630ED /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				702345082853680900733557 /* Assets.xcassets */,
 				7023450A2853680900733557 /* Preview Content */,
 				70928ED82856D495001630ED /* ReposStore.swift */,
+				70928EDC285705B3001630ED /* GitHubClient.swift */,
+				70928EDE2857080A001630ED /* APIError.swift */,
 			);
 			path = "mixi-SwiftUI-Training";
 			sourceTree = "<group>";
@@ -307,10 +313,12 @@
 				702345312853A24F00733557 /* User.swift in Sources */,
 				7023452F2853A23700733557 /* Repo.swift in Sources */,
 				70928ED32853B7F9001630ED /* RepoDetailView.swift in Sources */,
+				70928EDD285705B3001630ED /* GitHubClient.swift in Sources */,
 				702345072853680100733557 /* RepoListView.swift in Sources */,
 				70928ED92856D495001630ED /* ReposStore.swift in Sources */,
 				70928ED72853B94F001630ED /* User+mock.swift in Sources */,
 				702345052853680100733557 /* mixi_SwiftUI_TrainingApp.swift in Sources */,
+				70928EDF2857080A001630ED /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
