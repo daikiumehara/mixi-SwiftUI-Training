@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		702345052853680100733557 /* mixi_SwiftUI_TrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345042853680100733557 /* mixi_SwiftUI_TrainingApp.swift */; };
-		702345072853680100733557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345062853680100733557 /* ContentView.swift */; };
+		702345072853680100733557 /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345062853680100733557 /* RepoListView.swift */; };
 		702345092853680900733557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 702345082853680900733557 /* Assets.xcassets */; };
 		7023450C2853680900733557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7023450B2853680900733557 /* Preview Assets.xcassets */; };
 		702345162853680900733557 /* mixi_SwiftUI_TrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345152853680900733557 /* mixi_SwiftUI_TrainingTests.swift */; };
@@ -17,6 +17,9 @@
 		7023452F2853A23700733557 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023452E2853A23700733557 /* Repo.swift */; };
 		702345312853A24F00733557 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345302853A24F00733557 /* User.swift */; };
 		702345332853A45300733557 /* RepoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702345322853A45300733557 /* RepoRow.swift */; };
+		70928ED32853B7F9001630ED /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928ED22853B7F9001630ED /* RepoDetailView.swift */; };
+		70928ED52853B946001630ED /* Repo+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928ED42853B946001630ED /* Repo+mock.swift */; };
+		70928ED72853B94F001630ED /* User+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70928ED62853B94F001630ED /* User+mock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 /* Begin PBXFileReference section */
 		702345012853680100733557 /* mixi-SwiftUI-Training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mixi-SwiftUI-Training.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		702345042853680100733557 /* mixi_SwiftUI_TrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mixi_SwiftUI_TrainingApp.swift; sourceTree = "<group>"; };
-		702345062853680100733557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		702345062853680100733557 /* RepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
 		702345082853680900733557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7023450B2853680900733557 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		702345112853680900733557 /* mixi-SwiftUI-TrainingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mixi-SwiftUI-TrainingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +53,9 @@
 		7023452E2853A23700733557 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		702345302853A24F00733557 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		702345322853A45300733557 /* RepoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRow.swift; sourceTree = "<group>"; };
+		70928ED22853B7F9001630ED /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
+		70928ED42853B946001630ED /* Repo+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+mock.swift"; sourceTree = "<group>"; };
+		70928ED62853B94F001630ED /* User+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+mock.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,9 @@
 		702345032853680100733557 /* mixi-SwiftUI-Training */ = {
 			isa = PBXGroup;
 			children = (
-				702345352853A59900733557 /* Model */,
-				702345342853A59500733557 /* View */,
+				70E6CFAA2858FAE400DCC45D /* Mock */,
+				702345352853A59900733557 /* Models */,
+				702345342853A59500733557 /* Views */,
 				702345042853680100733557 /* mixi_SwiftUI_TrainingApp.swift */,
 				702345082853680900733557 /* Assets.xcassets */,
 				7023450A2853680900733557 /* Preview Content */,
@@ -134,22 +141,32 @@
 			path = "mixi-SwiftUI-TrainingUITests";
 			sourceTree = "<group>";
 		};
-		702345342853A59500733557 /* View */ = {
+		702345342853A59500733557 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				702345062853680100733557 /* ContentView.swift */,
+				702345062853680100733557 /* RepoListView.swift */,
 				702345322853A45300733557 /* RepoRow.swift */,
+				70928ED22853B7F9001630ED /* RepoDetailView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		702345352853A59900733557 /* Model */ = {
+		702345352853A59900733557 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7023452E2853A23700733557 /* Repo.swift */,
 				702345302853A24F00733557 /* User.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		70E6CFAA2858FAE400DCC45D /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				70928ED42853B946001630ED /* Repo+mock.swift */,
+				70928ED62853B94F001630ED /* User+mock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +300,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				702345332853A45300733557 /* RepoRow.swift in Sources */,
+				70928ED52853B946001630ED /* Repo+mock.swift in Sources */,
 				702345312853A24F00733557 /* User.swift in Sources */,
 				7023452F2853A23700733557 /* Repo.swift in Sources */,
-				702345072853680100733557 /* ContentView.swift in Sources */,
+				70928ED32853B7F9001630ED /* RepoDetailView.swift in Sources */,
+				702345072853680100733557 /* RepoListView.swift in Sources */,
+				70928ED72853B94F001630ED /* User+mock.swift in Sources */,
 				702345052853680100733557 /* mixi_SwiftUI_TrainingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
