@@ -8,11 +8,11 @@
 import Foundation
 
 struct User: Decodable {
-    var name: String
-    var imageURL: URL
+    let name: String
+    let avatarURL: URL
     
     private enum CodingKeys: String, CodingKey {
         case name = "login"
-        case imageURL = "avatarUrl"
+        case avatarURL = "avatarUrl"
     }
 }

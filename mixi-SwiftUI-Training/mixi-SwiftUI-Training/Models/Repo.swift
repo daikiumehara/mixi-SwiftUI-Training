@@ -8,9 +8,9 @@
 import Foundation
 
 struct Repo: Identifiable, Decodable {
-    var id: Int
-    var name: String
-    var owner: User
-    var description: String?
-    var stargazersCount: Int
+    let id: Int
+    let name: String
+    let owner: User
+    let description: String?
+    let stargazersCount: Int
 }
