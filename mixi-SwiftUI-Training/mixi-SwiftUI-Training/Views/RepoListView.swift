@@ -8,22 +8,14 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @State private var mockRepos: [Repo] = []
-    
-    private func loadRepos() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            mockRepos = [
-                .mock1, .mock2, .mock3, .mock4, .mock5
-            ]
-        }
-    }
+    @StateObject private var reposStore = ReposStore()
     
     var body: some View {
         NavigationView {
-            if mockRepos.isEmpty {
+            if reposStore.repos.isEmpty {
                 ProgressView("loading...")
             } else {
-                List(mockRepos) { repo in
+                List(reposStore.repos) { repo in
                     NavigationLink {
                         RepoDetailView(repo: repo)
                     } label: {
@@ -33,8 +25,8 @@ struct RepoListView: View {
                 .navigationTitle("Repositories")
             }
         }
-        .onAppear {
-            loadRepos()
+        .task {
+            await reposStore.loadRepos()
         }
     }
 }
